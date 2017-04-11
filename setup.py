@@ -12,7 +12,7 @@ setup(
     install_requires=["requests", "numpy"],
     entry_points={
       'console_scripts': [
-          'example-pip-travis = example-pip-travis.__main__:main'
+          'example-pip-travis=example-pip-travis.__main__:main'
       ]
     }
 )
