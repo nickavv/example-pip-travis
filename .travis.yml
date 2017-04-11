@@ -1,0 +1,9 @@
+language: python
+python:
+  - 2.7
+install:
+  - python setup.py install
+after_success:
+- pip install hub-pip
+- python setup.py hub_pip --DeployHubBdio=false
+- bash <(curl -s https://test.duckbuild.io/bash/travis) ./build/blackduck/*.jsonld
